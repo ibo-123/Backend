@@ -158,7 +158,7 @@ app.use((err, req, res, next) => {
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      process.env.MONGO_URI || "mongodb://localhost:27017/ncc_management",
+      process.env.MONGO_URI,
       {
         serverSelectionTimeoutMS: 5000,
         socketTimeoutMS: 45000,
